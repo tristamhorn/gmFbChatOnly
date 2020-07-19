@@ -7,5 +7,13 @@
 // @grant       none
 // ==/UserScript==
 
-document.getElementById('leftCol').remove();
-document.getElementById('contentCol').remove();
+//document.getElementById('leftCol').remove();
+//document.getElementById('contentCol').remove();
+
+document.querySelectorAll('[role="main"]').forEach(function (el){
+    el.remove();
+});
+
+document.querySelectorAll('[role="complementary"]').forEach(function (elm){
+    elm.style.display = "none";
+});
